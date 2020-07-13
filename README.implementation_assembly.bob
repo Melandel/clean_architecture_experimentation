@@ -1,0 +1,74 @@
+ .----------------------------------------------------------------------------.
+ |                        {b} Implementation Assembly                         |
+ '----------------------------------------------------------------------------'
+ .----------------------------------------------------------------------------.
+ | {b}                                                                        |
+ | #-> API Implementation                                                     |
+ |                                                                            |
+ |         C#]   classes                                                      |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ | #-> Behavior Validation                                                    |
+ |                                                                            |
+ |         C#]   concrete implementation of abstract tests                    |
+ |                 Inputs that are not method parameters should be translated |
+ |                 from strings to the objects used by the implementation     |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ | #-> Technical Terminology Specification                                    |
+ |                                                                            |
+ |         C#]   xml comments attached to the C# classes                      |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ |                                                                            |
+ | #-> Technical Architecture Decision Log                                    |
+ |                                                                            |
+ |         Filesystem] "ADL" folder composed of "ADR" textual files           |
+ |                                                                            |
+ '----------------------------------------------------------------------------'
+	# Legend:
+g = {
+ fill: #8CB369;
+}
+G = {
+ fill: #A1CCA5;
+}
+u = {
+ fill: #84ACCE;
+}
+U = {
+ fill: #729FCF;
+}
+b = {
+ fill: #C8AB83;
+}
+B = {
+ fill: #D3CCA6;
+}
+r = {
+ fill: #FCB97D;
+}
+R = {
+ fill: #FF8E72;
+}
+w = {
+ fill: #abadb0;
+}
+W = {
+ fill: #E8E5DA;
+}

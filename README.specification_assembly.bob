@@ -1,0 +1,74 @@
+ .------------------------------------------------------------------------------------------.  
+ |                               {B} Specification Assembly                                 |  
+ '------------------------------------------------------------------------------------------'  
+ .------------------------------------------------------------------------------------------.  
+ | {B}                                                                                      |  
+ | #-> API Specification                                                                    |  
+ |                                                                                          |  
+ |         C#]   interfaces                                                                 |  
+ |                                                                                          |  
+ |                                                                                          |  
+ |                                                                                          |  
+ | #-> Behavior Specification                                                               |  
+ |                                                                                          |  
+ |         C#]   abstract tests against interfaces                                          |  
+ |                 Inputs that are not method parameters should be represented by strings.  |  
+ |               Examples of such inputs: configuration options, language of the app, etc.  |  
+ |                                                                                          |  
+ |                                                                                          |  
+ |                                                                                          |  
+ | #-> Functional Terminology Specification                                                 |  
+ |                                                                                          |  
+ |         C#]   xml comments attached to the C# interfaces                                 |  
+ |                                                                                          |  
+ |                                                                                          |  
+ |                                                                                          |  
+ | #-> Example Requests                                                                     |  
+ |                                                                                          |  
+ |         C#]   meaningful request objects used in tests                                   |  
+ |                   Should be used when returning a bad request or format error            |  
+ |                                                                                          |  
+ |                                                                                          |  
+ |                                                                                          |  
+ | #-> Example Responses                                                                    |  
+ |                                                                                          |  
+ |         C#]   meaningful response objects used in tests                                  |  
+ |                                                                                          |  
+ |                                                                                          |  
+ |                                                                                          |  
+ | #-> Functional Architecture Decision Log                                                 |  
+ |                                                                                          |  
+ |         Filesystem] "ADL" folder composed of "ADR" textual files                         |  
+ |                                                                                          |  
+ '------------------------------------------------------------------------------------------'  
+	# Legend:
+g = {
+ fill: #8CB369;
+}
+G = {
+ fill: #A1CCA5;
+}
+u = {
+ fill: #84ACCE;
+}
+U = {
+ fill: #729FCF;
+}
+b = {
+ fill: #C8AB83;
+}
+B = {
+ fill: #D3CCA6;
+}
+r = {
+ fill: #FCB97D;
+}
+R = {
+ fill: #FF8E72;
+}
+w = {
+ fill: #abadb0;
+}
+W = {
+ fill: #E8E5DA;
+}

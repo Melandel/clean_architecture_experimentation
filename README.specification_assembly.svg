@@ -1,0 +1,221 @@
+<svg height="704" width="752" xmlns="http://www.w3.org/2000/svg">
+    <style>line, path, circle,rect,polygon {
+                          stroke: black;
+                          stroke-width: 2;
+                          stroke-opacity: 1;
+                          fill-opacity: 1;
+                          stroke-linecap: round;
+                          stroke-linejoin: miter;
+                        }
+
+                    text {
+                        fill: black;
+                        }
+                        rect.backdrop{
+                            stroke: none;
+                            fill: #575b61;
+                        }
+                        .broken{
+                            stroke-dasharray: 8;
+                        }
+                        .filled{
+                            fill: transparent;
+                        }
+                        .bg_filled{
+                            fill: #575b61;
+                        }
+                        .nofill{
+                            fill: #575b61;
+                        }
+
+                        text {
+                         font-family: monospace;
+                         font-size: 14px;
+                        }
+
+                        .end_marked_arrow{
+                            marker-end: url(#arrow);
+                         }
+                        .start_marked_arrow{
+                            marker-start: url(#arrow);
+                         }
+
+                        .end_marked_diamond{
+                            marker-end: url(#diamond);
+                         }
+                        .start_marked_diamond{
+                            marker-start: url(#diamond);
+                         }
+
+                        .end_marked_circle{
+                            marker-end: url(#circle);
+                         }
+                        .start_marked_circle{
+                            marker-start: url(#circle);
+                         }
+
+                        .end_marked_open_circle{
+                            marker-end: url(#open_circle);
+                         }
+                        .start_marked_open_circle{
+                            marker-start: url(#open_circle);
+                         }
+
+                        .end_marked_big_open_circle{
+                            marker-end: url(#big_open_circle);
+                         }
+                        .start_marked_big_open_circle{
+                            marker-start: url(#big_open_circle);
+                         }
+
+                         .g{ 
+ fill: #8CB369;
+ }
+.G{ 
+ fill: #A1CCA5;
+ }
+.u{ 
+ fill: #84ACCE;
+ }
+.U{ 
+ fill: #729FCF;
+ }
+.b{ 
+ fill: #C8AB83;
+ }
+.B{ 
+ fill: #D3CCA6;
+ }
+.r{ 
+ fill: #FCB97D;
+ }
+.R{ 
+ fill: #FF8E72;
+ }
+.w{ 
+ fill: #abadb0;
+ }
+.W{ 
+ fill: #E8E5DA;
+ }
+                        </style>
+    <defs>
+        <marker id="arrow" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="4" refY="2" viewBox="-2 -2 8 8">
+            <polygon points="0,0 0,4 4,2 0,0"></polygon>
+        </marker>
+        <marker id="diamond" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="4" refY="2" viewBox="-2 -2 8 8">
+            <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
+        </marker>
+        <marker id="circle" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="4" refY="4" viewBox="0 0 8 8">
+            <circle class="filled" cx="4" cy="4" r="2"></circle>
+        </marker>
+        <marker id="open_circle" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="4" refY="4" viewBox="0 0 8 8">
+            <circle class="bg_filled" cx="4" cy="4" r="2"></circle>
+        </marker>
+        <marker id="big_open_circle" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="4" refY="4" viewBox="0 0 8 8">
+            <circle class="bg_filled" cx="4" cy="4" r="3"></circle>
+        </marker>
+    </defs>
+    <rect class="backdrop" height="704" width="752" x="0" y="0"></rect>
+    <rect class="solid nofill B" height="32" rx="4" width="728" x="12" y="8"></rect>
+    <text class="" x="298" y="28">Specification</text>
+    <text class="" x="410" y="28">Assembly</text>
+    <rect class="solid nofill B" height="624" rx="4" width="728" x="12" y="56"></rect>
+    <rect class="solid filled " height="8" rx="0" width="8" x="24" y="84"></rect>
+    <line class="solid end_marked_arrow " x1="32" x2="48" y1="88" y2="88"></line>
+    <text class="" x="58" y="92">API</text>
+    <text class="" x="90" y="92">Specification</text>
+    <text class="" x="90" y="124">C#]</text>
+    <text class="" x="138" y="124">interfaces</text>
+    <rect class="solid filled " height="8" rx="0" width="8" x="24" y="180"></rect>
+    <line class="solid end_marked_arrow " x1="32" x2="48" y1="184" y2="184"></line>
+    <text class="" x="58" y="188">Behavior</text>
+    <text class="" x="130" y="188">Specification</text>
+    <text class="" x="90" y="220">C#]</text>
+    <text class="" x="138" y="220">abstract</text>
+    <text class="" x="154" y="236">Inputs</text>
+    <text class="" x="138" y="252">Examples</text>
+    <text class="" x="210" y="220">tests</text>
+    <text class="" x="258" y="220">against</text>
+    <text class="" x="322" y="220">interfaces</text>
+    <text class="" x="210" y="236">that</text>
+    <text class="" x="250" y="236">are</text>
+    <text class="" x="282" y="236">not</text>
+    <text class="" x="314" y="236">method</text>
+    <text class="" x="370" y="236">parameters</text>
+    <text class="" x="458" y="236">should</text>
+    <text class="" x="514" y="236">be</text>
+    <text class="" x="538" y="236">represented</text>
+    <text class="" x="634" y="236">by</text>
+    <text class="" x="658" y="236">strings.</text>
+    <text class="" x="210" y="252">of</text>
+    <text class="" x="234" y="252">such</text>
+    <text class="" x="274" y="252">inputs:</text>
+    <text class="" x="338" y="252">configuration</text>
+    <text class="" x="450" y="252">options,</text>
+    <text class="" x="522" y="252">language</text>
+    <text class="" x="594" y="252">of</text>
+    <text class="" x="618" y="252">the</text>
+    <text class="" x="650" y="252">app,</text>
+    <text class="" x="690" y="252">etc.</text>
+    <rect class="solid filled " height="8" rx="0" width="8" x="24" y="308"></rect>
+    <line class="solid end_marked_arrow " x1="32" x2="48" y1="312" y2="312"></line>
+    <text class="" x="58" y="316">Functional</text>
+    <text class="" x="146" y="316">Terminology</text>
+    <text class="" x="242" y="316">Specification</text>
+    <text class="" x="90" y="348">C#]</text>
+    <text class="" x="138" y="348">xml</text>
+    <text class="" x="170" y="348">comments</text>
+    <text class="" x="242" y="348">attached</text>
+    <text class="" x="314" y="348">to</text>
+    <text class="" x="338" y="348">the</text>
+    <text class="" x="370" y="348">C#</text>
+    <text class="" x="394" y="348">interfaces</text>
+    <rect class="solid filled " height="8" rx="0" width="8" x="24" y="404"></rect>
+    <line class="solid end_marked_arrow " x1="32" x2="48" y1="408" y2="408"></line>
+    <text class="" x="58" y="412">Example</text>
+    <text class="" x="122" y="412">Requests</text>
+    <text class="" x="90" y="444">C#]</text>
+    <text class="" x="138" y="444">meaningful</text>
+    <text class="" x="170" y="460">Should</text>
+    <text class="" x="226" y="444">request</text>
+    <text class="" x="226" y="460">be</text>
+    <text class="" x="250" y="460">used</text>
+    <text class="" x="290" y="444">objects</text>
+    <text class="" x="354" y="444">used</text>
+    <text class="" x="394" y="444">in</text>
+    <text class="" x="418" y="444">tests</text>
+    <text class="" x="290" y="460">when</text>
+    <text class="" x="330" y="460">returning</text>
+    <text class="" x="410" y="460">a</text>
+    <text class="" x="426" y="460">bad</text>
+    <text class="" x="458" y="460">request</text>
+    <text class="" x="522" y="460">or</text>
+    <text class="" x="546" y="460">format</text>
+    <text class="" x="602" y="460">error</text>
+    <rect class="solid filled " height="8" rx="0" width="8" x="24" y="516"></rect>
+    <line class="solid end_marked_arrow " x1="32" x2="48" y1="520" y2="520"></line>
+    <text class="" x="58" y="524">Example</text>
+    <text class="" x="122" y="524">Responses</text>
+    <text class="" x="90" y="556">C#]</text>
+    <text class="" x="138" y="556">meaningful</text>
+    <text class="" x="226" y="556">response</text>
+    <text class="" x="298" y="556">objects</text>
+    <text class="" x="362" y="556">used</text>
+    <text class="" x="402" y="556">in</text>
+    <text class="" x="426" y="556">tests</text>
+    <rect class="solid filled " height="8" rx="0" width="8" x="24" y="612"></rect>
+    <line class="solid end_marked_arrow " x1="32" x2="48" y1="616" y2="616"></line>
+    <text class="" x="58" y="620">Functional</text>
+    <text class="" x="146" y="620">Architecture</text>
+    <text class="" x="250" y="620">Decision</text>
+    <text class="" x="322" y="620">Log</text>
+    <text class="" x="90" y="652">Filesystem]</text>
+    <text class="" x="186" y="652">&quot;ADL&quot;</text>
+    <text class="" x="234" y="652">folder</text>
+    <text class="" x="290" y="652">composed</text>
+    <text class="" x="362" y="652">of</text>
+    <text class="" x="386" y="652">&quot;ADR&quot;</text>
+    <text class="" x="434" y="652">textual</text>
+    <text class="" x="498" y="652">files</text>
+</svg>

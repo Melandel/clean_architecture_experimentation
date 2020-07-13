@@ -3,27 +3,31 @@ A project where I try to apply best practices about clean architecture, and also
 ## Clean Architecture
 >[![the clean architecture, also known as hexagonal architecture](README.clean_architecture.png)](https://youtu.be/WpkDN78P884?t=420)
 
-Some resources about it:
+Some resources about this architecture:
 * [conference](https://youtu.be/WpkDN78P884?t=420)
 * [article](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 * [book](https://www.google.com/search?q=clean+architecture+book)
+* it is also known as the hexagonal architecture 
 
 ## Specification & Implementation Assemblies
+One of my ideas is that there would be two kinds of assemblies:
+* "Specification" assemblies
+* "Implementation" assemblies
 
 ### "Specification" assemblies
-Holding no implementation whatsoever, they provide the maintainers with a plethora of valuable information. :
-* the API of the programmatic bricks of the code base
-* the introduction to some terminology
-* the behavior of these bricks under the shape of blackbox tests - that-is-to-say, what outputs are returned from given inputs. 
-_Note that when I say inputs, I'm not restricting myself to method parameters. I'm talking about *all* the inputs, even if they come from a config file, a database, a server machine. These inputs would then be used in the test in the shape of self-describing strings._
-* meaningful examples of the input and output parameters
+>![Specification assembly](README.specification_assembly.svg)
 
-In other words, if Project Owners were developers, here is where they'd write user stories, in the shape of interfaces to implement and blackbox tests to pass.
+A few notes about this concept:
+* if Project Owners were developers, here is where they'd write user stories, in the shape of interfaces to implement and blackbox tests to pass.
+* you could rewrite a new, functional project from scratch if you had only these assemblies
+* these assemblies give the developer a binary answer to whether their job is good enough or not through the tests
 
 ### "Implementation" assemblies
-Holding the implementation of the related _"Specification" assembly_ and implement the abstract, blackbox tests in order to guarantee that the implementation satisfies its specification.
+>![Implementation assembly](README.implementation_assembly.svg)
 
-Yes, I know, that's mixing test code with production code, there are dependencies to the unit testing framework all over the place. I'm experimenting whether the pros beat the cons. Get over it.
+A few notes about this concept:
+* you wouldn't be able to understand the functional part of the project if you had only these assemblies
+* yes, I know, that's mixing test code with production code, there are dependencies to the unit testing framework all over the place. I'm experimenting whether the pros beat the cons. Get over it.
 
 ## Architecture Decision Log
 I also believe in [Architecture Decision Log](https://github.com/joelparkerhenderson/architecture_decision_record) and want to experiment with it.
