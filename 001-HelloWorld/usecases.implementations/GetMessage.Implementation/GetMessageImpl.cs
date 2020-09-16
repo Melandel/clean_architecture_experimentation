@@ -15,10 +15,10 @@ namespace HelloWorld {
 		}
 	}
 
-	public class GetMessageImpl : GetMessage
+	internal class GetMessageImpl : GetMessage
 	{
 		internal MessageGateway MessageGateway { get; }
-		internal GetMessageImpl(MessageGateway messageGateway) {
+		public GetMessageImpl(MessageGateway messageGateway) {
 			MessageGateway = messageGateway;
 		}
 		public GetMessage.Response Process(GetMessage.Request req) {

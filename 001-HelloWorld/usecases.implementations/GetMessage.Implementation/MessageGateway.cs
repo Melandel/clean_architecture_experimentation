@@ -1,6 +1,6 @@
 namespace HelloWorld
 {
-	internal interface MessageGateway
+	public interface MessageGateway
 	{
 		Message GetMessage();
 	}
