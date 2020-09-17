@@ -29,25 +29,88 @@ details
 * One thing I could try would be the following:
 ```
 |-- domain
-|-- usecases
-    |-- module_A
-    |-- module_B
-    |-- specs
+    |-- bounded_context_I
+    `-- bounded_context_II
+|-- application_1
+    |-- usecases
         |-- module_A
-          |-- abstractions
-              `-- examples
-          |-- behavior
+            |-- gateways.specs
+                |-- abstractions
+                    `-- abstractions.csproj
+                `-- behavior
+                    `-- behavior.csproj
+            |-- implementation
+                `-- implementation.csproj
+            `-- tests
+                `-- tests.csproj
         |-- module_B
-          |-- abstractions
-              `-- examples
-          |-- behavior
-|-- name_of_product
-    |-- module_A.adapters
-        |-- Controllers
-        `-- Data
-    |-- module_B.adapters
-        |-- Controllers
-        `-- Data
-    |-- startup
-    `-- ui
+            |-- gateways.specs
+                |-- abstractions
+                `-- behavior
+            |-- implementation
+            `-- tests
+        |-- specs
+            |-- module_A
+              |-- abstractions
+                  `-- abstractions.csproj
+              `-- behavior
+                  `-- behavior.csproj
+            `-- module_B
+              |-- abstractions
+              `-- behavior
+    |-- name_of_product
+        |-- module_A
+            |-- controllers
+                |-- implementation
+                    `-- implementation.csproj
+                `-- tests
+                    `-- tests.csproj
+            |-- gateways
+                |-- implementation
+                    `-- implementation.csproj
+                `-- tests
+                    `-- tests.csproj
+            `-- presenters
+                |-- implementation
+                    `-- implementation.csproj
+                `-- tests
+                    `-- tests.csproj
+        |-- module_B
+            |-- controllers
+                |-- implementation
+                `-- tests
+            |-- gateways
+                |-- implementation
+                `-- tests
+            `-- presenters
+                |-- implementation
+                `-- tests
+        |-- specs
+            |-- module_A
+                |-- controllers
+                    |-- abstractions
+                        `-- abstractions.csproj
+                    `-- behavior
+                        `-- behavior.csproj
+                `-- presenters
+                    |-- abstractions
+                        `-- abstractions.csproj
+                    `-- behavior
+                        `-- behavior.csproj
+            `-- module_B
+                |-- controllers
+                    |-- abstractions
+                    `-- behavior
+                `-- presenters
+                    |-- abstractions
+                    `-- behavior
+        |-- startup.csproj
+        `-- ui.csproj
+|-- application_2
+    |-- ...
 ```
+
+* `implementation` projects would have a `/extensions/IServiceCollectionExtensions.cs` to configure dependency injection
+* `abstractions` projects would have a `/examples` folder to store examples that are meaningful for the business
+* `abstractions` projects would also have a folder for each kind of test double: `/Stubs`, `/Mocks`, `/Spies`, `/Fakes` and `/Dummies`
+* `behavior` projects would have a `/utils` folder in order to host `TestInputBuilder` classes that wrap the building process of the otherwise immutable input dtos, with default values matching items from `abstractions/examples`
