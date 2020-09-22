@@ -5,7 +5,7 @@ namespace Messaging
 		public string Content { get; set; }
 		public static Message Create(string content)
 		{
-			return new Message(content);
+			return new Message(content ?? "");
 		}
 
 		private Message(string content)

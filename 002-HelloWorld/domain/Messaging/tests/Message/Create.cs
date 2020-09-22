@@ -14,5 +14,20 @@ namespace Messaging.Tests
 			// Assert
 			Assert.Equal("foo", sut.Content);
 		}
+
+		[Theory]
+		[InlineData(null)]
+		[InlineData("")]
+		public void WHEN_input_is_null_or_empty_EXPECT_Content_TO_BE_empty(string edgeCaseInput)
+		{
+			// Arrange
+			var input = edgeCaseInput;
+			// Act
+			var sut = Message.Create(input);
+			// Assert
+			Assert.Equal(string.Empty, sut.Content);
+		}
+
+
 	}
 }
