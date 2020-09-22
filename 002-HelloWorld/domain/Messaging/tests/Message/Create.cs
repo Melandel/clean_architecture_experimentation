@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Messaging.Tests
@@ -28,6 +30,23 @@ namespace Messaging.Tests
 			Assert.Equal(string.Empty, sut.Content);
 		}
 
+		public static IEnumerable<object[]> InputSpecifiedAsOutOfScope =>
+			new List<object[]> {
+				new object[] { "😀 😃 😄" }, // Emojis
+				new object[] { "     " }, // Weird characters
+				new object[] { (new String('x', 2000 + 1)) } // More than 2000 characters
+			};
 
+		[Theory]
+		[MemberData(nameof(InputSpecifiedAsOutOfScope))]
+		public void WHEN_input_is_specified_as_out_of_scope_EXPECT_Method_TO_NOT_throw(string outOfScopeInput)
+		{
+			// Arrange
+			var input = outOfScopeInput;
+			// Act
+			var sut = Message.Create(input);
+			// Assert
+			Assert.True(true, "These inputs do not make the code throw");
+		}
 	}
 }
