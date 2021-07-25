@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Configurations>Production;Development</Configurations>
+		<Configuration Condition=" '$(Configuration)' == '' OR '$(Configuration)' == 'Debug' ">Development</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Production'">
+		<ConfigurationGroup>Release</ConfigurationGroup>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Verification'">
+		<ConfigurationGroup>Release</ConfigurationGroup>
+		<DefineConstants>$(DefineConstants);COMPILE_TESTS</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Development'">
+		<ConfigurationGroup>Debug</ConfigurationGroup>
+		<DefineConstants>$(DefineConstants);COMPILE_TESTS</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Implementation.Repositories\Contract\Application.UseCases.ModuleA.Repositories.Contract.csproj" />
+		<ProjectReference Include="..\Contract\Application.UseCases.ModuleA.Contract.csproj" />
+		<ProjectReference Include="..\..\..\ArchitecturalConcepts\Application.ArchitecturalConcepts.csproj" />
+	</ItemGroup>
+
+	<Choose>
+		<When Condition="$(DefineConstants.Contains('COMPILE_TESTS'))">
+			<ItemGroup>
+				<PackageReference Include="Microsoft.NET.Test.Sdk" Version="*" />
+				<PackageReference Include="xunit" Version="*" />
+				<PackageReference Include="xunit.runner.visualstudio" Version="*"/>
+				<ProjectReference	Include="..\Implementation.Repositories\InMemoryImplementation\Application.UseCases.ModuleA.Repositories.InMemoryImplementation.csproj"	/>
+			</ItemGroup>
+		</When>
+		<Otherwise>
+			<PropertyGroup>
+				<DefaultItemExcludes>$(DefaultItemExcludes);Fixtures\**</DefaultItemExcludes>
+			</PropertyGroup>
+		</Otherwise>
+	</Choose>
+
+</Project>
